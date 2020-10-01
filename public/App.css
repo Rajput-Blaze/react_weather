@@ -1,136 +1,125 @@
 * {
+  height: 100%;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   text-transform: capitalize;
 }
 
-/*responsive for mobile above  300 px view*/
-@media only screen and (min-width: 300px) {
-  .searchbar {
-    width: 80vw;
-    margin: 0 auto;
-    padding-top: 5vh;
+
+/* @media only screen and (min-width: 900px){ */
+
+  .main_outer{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #016792;
+    background: -moz-linear-gradient(top,  #016792 0%, #00182b 100%);
+    background: -webkit-linear-gradient(top,  #016792 0%,#00182b 100%);
+    background: -o-linear-gradient(top,  #016792 0%,#00182b 100%);
+    background: -ms-linear-gradient(top,  #016792 0%,#00182b 100%);
+    background: linear-gradient(to bottom,  #016792 0%,#00182b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#016792', endColorstr='#00182b',GradientType=0 );
   }
 
-  .main {
+  .container{
     background-image: url(images/3.png);
-    height: 100vh;
     background-repeat: no-repeat;
-    background-size: 150vw 100vh;
+    background-size: cover;
+    border: 1px;
+    border-radius: 10px;
+    position: relative;
   }
 
-  ::placeholder {
+  .searchbar{
+    padding-top: 50px;
+    width: fit-content;
+    margin: auto;
+    width: 40%;
+  
+  }
+
+  ::placeholder{
     text-align: center;
-    font-size: 22px;
+    font-size: 16px;
   }
 
-  input {
+  input{
     text-align: center;
-    padding: 2vh 0px;
   }
 
-  .main .searchbar span {
-    padding-left: 18vw;
-    color: aliceblue;
+  .result{
+    background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    margin: auto;
+    height: 200px;
+    width: 250px;
+    border: 5px;
+    border-color: antiquewhite;
+    border-radius: 20px;
+  }
+
+  /* .result{
+    top: -50%;
+  } */
+  
+  .city_name_img{
+    margin-top: 10px;
+    height: 30px;
+    padding-bottom: 5px;
+  }
+
+  .temp{
+    height: 30px;
+    padding-bottom: 70px;
+  }
+
+  .img_icon_text{
+    height: 40px;
   }
 
   .city_name_img h2 {
+    height: 20px;
+
     text-align: center;
-    padding-top: 6vh;
+    color: aliceblue;
   }
 
-  .temp h1 {   /* TODO: */
+  .temp h1 {
+    height: 20px;
+    color: aliceblue;
     text-align: center;
-    font-size: 80px;
+    font-size: 70px;
     font-family: 'Playfair ', serif;
   }
 
   .img_icon_text {
-    display: flex;
-    flex-direction: column;  /* TODO: */
-    text-align: center;
-  }
-
-  #icon_text {
-    
-    font-size: 22px;   /* TODO: */
-    font-weight: 600;
-  }
-
-  .date_formate {
-    text-align: center;
-    margin-top: 65px;
-    font-weight: bolder;
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  main_outer {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .searchbar {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 5vh;
-  }
-
-  .main {
-    /* background-image: url(images/3.png); */
-    background-repeat: no-repeat;
-    background-size: 700px 100vh;
-    width: 500px;
-    margin: 1% auto;
-    border-radius: 1%;
-    outline: none;
-    -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.75);
-  }
-
-  ::placeholder {
-    text-align: center;
-    font-size: 22px;
-  }
-
-  input {
-    text-align: center;
-    padding: 2vh 0px;
-  }
-
-  .main .searchbar span {
-    padding-left: 150px;
+    height: 20px;
+    line-height: 0;
     color: aliceblue;
-  }
-
-  .city_name_img h2 {
-    text-align: center;
-    padding-top: 6vh;
-  }
-
-  .temp h1 {   /* TODO: */
-    text-align: center;
-    font-size: 80px;
-    font-family: 'Playfair ', serif;
-  }
-
-  .img_icon_text {
     display: flex;
-    flex-direction: column;  /* TODO: */
+    flex-direction: column;
     text-align: center;
+  }
+
+  #icon_img{
+    height: 40px;
+    width: 40px;
+    align-self: center;
   }
 
   #icon_text {
-    
-    font-size: 22px;   /* TODO: */
+    height: 20px;
+    color: aliceblue;
+    font-size: 22px;
     font-weight: 600;
-  }
-
-  .date_formate {
-    text-align: center;
-    margin-top: 65px;
-    font-weight: bolder;
-  }
-}
+  } 
