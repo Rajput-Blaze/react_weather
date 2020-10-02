@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 import BasicDetail from './component/BasicDetail';
 const api = {
@@ -32,28 +32,32 @@ function App() {
   return (
     <div className='main_outer'>
       <div className='main'>
+        <div className='container'>
         <div className='searchbar form-group'>
           <input
             className='form-control'
             type='text'
             id='search'
-            placeholder='city , state'
+            placeholder='City, State'
             onChange={(e) => setinputValue(e.target.value)}
             value={inputValue}
             onKeyDown={keyPress}
           />
-          <span>enter city,state name</span>
         </div>
+        <div className='result'>
         {typeof weather.main != 'undefined' ? (
           <BasicDetail
             name={weather.name}
             temps={Math.round(weather.main.temp)}
             description={weather.weather[0].description}
             iconurl ={ `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+            datetime = {new Date(weather.dt * 1000)}
           />
         ) : (
           ''
         )}
+        </div>
+      </div>
       </div>
     </div>
   );
